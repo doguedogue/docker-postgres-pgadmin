@@ -9,7 +9,7 @@ services:
             # - postgres-db:/var/lib/postgresql/data
             - ./postgres:/var/lib/postgresql/data
         environment:
-            - POSTGRES_PASSWORD=123456
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
     pgAdmin:
         depends_on:
@@ -20,8 +20,8 @@ services:
         volumes:
             - ./pgadmin:/var/lib/pgadmin
         environment:
-            - PGADMIN_DEFAULT_PASSWORD=123456
-            - PGADMIN_DEFAULT_EMAIL=superman@google.com
+            - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+            - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
 
 #CASO 1 - VOLUMEN
 # volumes:

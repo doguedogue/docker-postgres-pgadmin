@@ -2,3 +2,5 @@
 
 pgadmin/
 postgres/
+
+.env
